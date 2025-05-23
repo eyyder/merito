@@ -1,0 +1,373 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #3498db;
+}
+
+header h1 {
+    color: #2c3e50;
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+}
+
+header h2 {
+    color: #3498db;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+/* Estilos das telas */
+.screen {
+    display: none;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.screen.active {
+    display: flex;
+}
+
+/* Tela de introdução */
+.intro-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.intro-content h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.intro-content p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.intro-content ul {
+    text-align: left;
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.intro-content li {
+    margin-bottom: 10px;
+}
+
+/* Tela de questões */
+.progress-bar {
+    height: 8px;
+    background-color: #ecf0f1;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+#progress-fill {
+    height: 100%;
+    background-color: #3498db;
+    width: 5%;
+    transition: width 0.3s ease;
+}
+
+.question-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #7f8c8d;
+}
+
+#question-container {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+#question-text {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+.option {
+    display: flex;
+    align-items: flex-start;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.option:hover {
+    background-color: #ecf0f1;
+}
+
+.option.selected {
+    background-color: #d6eaf8;
+    border-color: #3498db;
+}
+
+.option-letter {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #3498db;
+    min-width: 25px;
+}
+
+/* Tela de feedback */
+#feedback-container {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+#feedback-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#feedback-header.correct {
+    color: #27ae60;
+}
+
+#feedback-header.incorrect {
+    color: #e74c3c;
+}
+
+#feedback-content {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+#feedback-explanation {
+    background-color: #eaf2f8;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #3498db;
+}
+
+/* Tela de resultados */
+#score-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0;
+}
+
+#score-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 10px solid #3498db;
+}
+
+#score-percentage {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+#score-text {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+#performance-analysis {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+#performance-analysis h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.performance-category {
+    margin-bottom: 15px;
+}
+
+.performance-category h4 {
+    margin-bottom: 5px;
+    color: #3498db;
+}
+
+/* Tela de revisão */
+#review-list {
+    margin: 20px 0;
+}
+
+.review-item {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border-left: 4px solid #ddd;
+}
+
+.review-item.correct {
+    border-left-color: #27ae60;
+}
+
+.review-item.incorrect {
+    border-left-color: #e74c3c;
+}
+
+.review-question-number {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.review-question-text {
+    margin-bottom: 10px;
+}
+
+.review-answer {
+    font-weight: bold;
+}
+
+.review-answer.correct {
+    color: #27ae60;
+}
+
+.review-answer.incorrect {
+    color: #e74c3c;
+}
+
+/* Botões e navegação */
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.btn {
+    padding: 12px 25px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+.btn:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+#restart-btn {
+    background-color: #95a5a6;
+}
+
+#restart-btn:hover {
+    background-color: #7f8c8d;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    header h2 {
+        font-size: 1.1rem;
+    }
+    
+    #question-text {
+        font-size: 1.1rem;
+    }
+    
+    .option {
+        padding: 12px;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+    }
+    
+    #score-circle {
+        width: 120px;
+        height: 120px;
+    }
+    
+    #score-percentage {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .navigation {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}

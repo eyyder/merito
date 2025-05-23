@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulado Educação Física - Vunesp</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Simulado de Educação Física</h1>
+            <h2>Estilo Vunesp</h2>
+        </header>
+
+        <div id="intro-screen" class="screen active">
+            <div class="intro-content">
+                <h2>Bem-vindo ao Simulado!</h2>
+                <p>Este simulado contém 20 questões no estilo Vunesp, elaboradas com base na análise de provas anteriores e do edital.</p>
+                <p>Características do simulado:</p>
+                <ul>
+                    <li>Questões com citação de autores (característica da Vunesp)</li>
+                    <li>Feedback imediato após cada resposta</li>
+                    <li>Explicações detalhadas das alternativas corretas</li>
+                    <li>Navegação intuitiva entre as questões</li>
+                </ul>
+                <p>Ao final, você receberá seu desempenho geral e poderá revisar as questões.</p>
+                <button id="start-btn" class="btn">Iniciar Simulado</button>
+            </div>
+        </div>
+
+        <div id="question-screen" class="screen">
+            <div class="progress-bar">
+                <div id="progress-fill"></div>
+            </div>
+            <div class="question-info">
+                <span id="question-number">Questão 1/20</span>
+                <span id="timer">00:00</span>
+            </div>
+            <div id="question-container">
+                <p id="question-text"></p>
+                <div id="options-container">
+                    <!-- Options will be inserted here by JavaScript -->
+                </div>
+            </div>
+            <div class="navigation">
+                <button id="confirm-btn" class="btn">Confirmar Resposta</button>
+            </div>
+        </div>
+
+        <div id="feedback-screen" class="screen">
+            <div id="feedback-container">
+                <div id="feedback-header"></div>
+                <div id="feedback-content"></div>
+                <div id="feedback-explanation"></div>
+            </div>
+            <div class="navigation">
+                <button id="next-btn" class="btn">Próxima Questão</button>
+            </div>
+        </div>
+
+        <div id="results-screen" class="screen">
+            <h2>Resultado Final</h2>
+            <div id="score-container">
+                <div id="score-circle">
+                    <span id="score-percentage">0%</span>
+                </div>
+                <p id="score-text">Você acertou <span id="correct-answers">0</span> de <span id="total-questions">20</span> questões.</p>
+            </div>
+            <div id="performance-analysis">
+                <h3>Análise de Desempenho</h3>
+                <div id="performance-content"></div>
+            </div>
+            <div class="navigation">
+                <button id="review-btn" class="btn">Revisar Questões</button>
+                <button id="restart-btn" class="btn">Reiniciar Simulado</button>
+            </div>
+        </div>
+
+        <div id="review-screen" class="screen">
+            <h2>Revisão de Questões</h2>
+            <div id="review-list">
+                <!-- Review items will be inserted here by JavaScript -->
+            </div>
+            <div class="navigation">
+                <button id="back-to-results-btn" class="btn">Voltar aos Resultados</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
